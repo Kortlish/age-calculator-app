@@ -1,0 +1,100 @@
+@use 'reset';
+@use 'colors';
+
+$padding: clamp(1.5rem, 4rem, 60px);
+
+body {
+	background-color: colors.$off-white;
+	font-family: 'Poppins', sans-serif;
+	display: grid;
+	place-items: center;
+}
+
+.colored {
+	color: colors.$purple;
+}
+
+.main-box {
+	background-color: colors.$white;
+	width: 90%;
+	max-width: 60em;
+	// margin: auto;
+	border-radius: 1em 1em 15em 1em;
+
+	.box-head {
+		padding: $padding;
+		padding-bottom: 0.5em;
+
+		display: flex;
+		gap: 1.65em;
+
+		label {
+			color: colors.$smokey-grey;
+			text-transform: uppercase;
+			letter-spacing: 0.2em;
+			font-size: 1.5rem;
+		}
+
+		input {
+			margin-top: 0.25em;
+			font-size: 2em;
+			padding: 1em;
+			width: 6em;
+			border-radius: 0.5em;
+			border: 2px solid colors.$off-white;
+			outline: none;
+			transition: border 250ms ease;
+		}
+
+		input::-webkit-outer-spin-button,
+		input::-webkit-inner-spin-button {
+			-webkit-appearance: none;
+			margin: 0;
+		}
+
+		input:hover {
+			cursor: pointer;
+		}
+
+		input:hover,
+		input:focus {
+			border: 2px solid colors.$purple;
+		}
+	}
+
+	p {
+		padding-left: $padding;
+		color: colors.$light-red;
+	}
+
+	hr {
+		margin: $padding;
+		width: calc(100% - 2 * $padding);
+	}
+
+	.division {
+		position: relative;
+		display: grid;
+		place-items: center;
+	}
+
+	img {
+		position: absolute;
+		top: 0;
+		right: $padding;
+		background-color: colors.$off-black;
+		padding: 1em;
+		border-radius: 50%;
+		cursor: pointer;
+	}
+
+	.calculated {
+		font-size: 6rem;
+		padding: $padding;
+		padding-top: 0;
+	}
+}
+
+.error {
+	font-weight: lighter;
+}
